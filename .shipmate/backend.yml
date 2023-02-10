@@ -1,0 +1,14 @@
+service:
+  name: backend
+  type: laravel:1.2
+  variables:
+    path_to_source_code: /backend
+    php_version: '8.1'
+    timezone: Europe/Brussels
+    deploy_script: |-
+      php artisan config:cache
+      php artisan view:cache
+  environment:
+    - APP_KEY
+public_endpoints:
+  - name: web
