@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+Route::get('/programming-languages', function () {
+    $languages = collect([
+        'Javascript',
+        'Python',
+        'Go',
+        'Java',
+        'Kotlin',
+        'PHP',
+        'C#',
+        'Swift',
+    ]);
+
+    $result = $languages->map(fn(string $language) => [
+        'name' => $language,
+    ]);
+
+    return response()->json($result);
+});
