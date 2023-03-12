@@ -1,7 +1,6 @@
-api: v1
 service:
   name: backend
-  type: serverless/laravel:1.1.1
+  type: laravel:1.1.1
   variables:
     path_to_source_code: /backend
     php_version: '8.1'
@@ -9,20 +8,8 @@ service:
       php artisan config:cache
       php artisan view:cache
     timezone: Europe/Brussels
-    web_worker_config:
-      memory: 1024
-      memory_per_request: 30
-      maximum_instances: 1
-      timeout: 10
-    cli_worker_config:
-      memory: 1024
-      memory_per_request: 30
-      maximum_instances: 1
-      timeout: 10
   environment:
     - APP_KEY
+
 public_endpoints:
   - name: web
-    alias: web
-    target:
-      worker: web
