@@ -15,10 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('message', ['message' => 'Welcome to the backend']);
+    return response()->view('home');
 });
 
-Route::get('/log-message', function () {
+Route::post('/log', function () {
     Log::info('Hello Shipmate!');
-    return view('message', ['message' => 'Message logged']);
+
+    return response()->json([
+        'message' => 'Message logged',
+    ]);
 });

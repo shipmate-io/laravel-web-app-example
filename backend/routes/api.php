@@ -1,5 +1,7 @@
 <?php
 
+use App\Fibonacci;
+use App\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,21 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/programming-languages', function () {
-    $languages = collect([
-        'Javascript',
-        'Python',
-        'Go',
-        'Java',
-        'Kotlin',
-        'PHP',
-        'C#',
-        'Swift',
-    ]);
+Route::get('/users', function (Request $request) {
+    $n = $request->get('n', 200);
 
-    $result = $languages->map(fn(string $language) => [
-        'name' => $language,
-    ]);
+    $users = Users::new()->generate($n);
 
-    return response()->json($result);
+    return response()->json([
+        'n' => $n,
+        'users' => $users,
+    ]);
+});
+
+Route::get('/fibonacci', function (Request $request) {
+    $n = $request->get('n', 3);
+
+    $result = Fibonacci::new()->calculate($n);
+
+    return response()->json([
+        'n' => $n,
+        'result' => $result,
+    ]);
 });
