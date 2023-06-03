@@ -8,3 +8,6 @@ service:
     build_target: server
   environment:
     - BACKEND_BASE_URL
+
+public_endpoints:
+  - name: web
