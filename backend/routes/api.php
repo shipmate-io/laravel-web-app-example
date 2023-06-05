@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/users', function (Request $request) {
-    $n = $request->get('n', 200);
+    $n = $request->get('n', 100);
 
     $users = Users::new()->generate($n);
 
@@ -28,7 +28,7 @@ Route::get('/users', function (Request $request) {
 });
 
 Route::get('/fibonacci', function (Request $request) {
-    $n = $request->get('n', 3);
+    $n = $request->get('n', 25);
 
     $result = Fibonacci::new()->calculate($n);
 

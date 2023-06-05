@@ -63,10 +63,10 @@ export default Vue.extend({
     },
     methods: {
         parseN(): number {
-            let n = this.$route.query.n || '30'
+            let n = this.$route.query.n || '25'
 
             if (Array.isArray(n)) {
-                n = n[0] || '30'
+                n = n[0] || '25'
             }
 
             return parseInt(n)
