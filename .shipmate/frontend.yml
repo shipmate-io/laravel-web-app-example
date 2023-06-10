@@ -4,6 +4,7 @@ service:
   type: 'nuxtjs:1.2'
   variables:
     path_to_source_code: /frontend
+    nodejs_version: 16
     package_manager: yarn
     build_target: server
   environment:
