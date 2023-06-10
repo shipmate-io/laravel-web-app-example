@@ -10,3 +10,7 @@ service:
       php artisan view:cache
   environment:
     - APP_KEY
+
+public_endpoints:
+  - name: web
+    alias: Web
