@@ -1,0 +1,14 @@
+service:
+  name: frontend
+  alias: Frontend
+  type: 'nuxtjs:1.2'
+  variables:
+    path_to_source_code: /frontend
+    package_manager: yarn
+    build_target: server
+  environment:
+    - BACKEND_BASE_URL
+
+public_endpoints:
+  - name: web
+    alias: Web
