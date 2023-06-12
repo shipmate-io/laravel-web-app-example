@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1 class="text-primary text-5xl leading-12 font-bold tracking-tight">
-            Shipmate Demo Application
+            Laravel Web Application
         </h1>
         <p class="text-xl mt-8">
             The application is built using a client-server architecture. The frontend is a server-side-rendered
