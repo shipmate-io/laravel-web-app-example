@@ -7,6 +7,8 @@ service:
     nodejs_version: 16
     package_manager: yarn
     build_target: server
+    web_worker_config:
+      maximum_concurrency: 2000
   environment:
     - BACKEND_BASE_URL
 
