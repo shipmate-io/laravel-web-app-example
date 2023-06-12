@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return response()->view('home');
+    return response()->view('welcome');
 });
 
 Route::post('/log', function () {
