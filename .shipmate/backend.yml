@@ -1,5 +1,4 @@
 service:
-  name: backend
   type: 'php:1.0'
   variables:
     path_to_source_code: /backend

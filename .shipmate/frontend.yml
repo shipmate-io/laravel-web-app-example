@@ -1,5 +1,4 @@
 service:
-  name: frontend
   type: 'nodejs:1.0'
   variables:
     path_to_source_code: /frontend
