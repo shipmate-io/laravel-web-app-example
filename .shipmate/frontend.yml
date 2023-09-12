@@ -8,3 +8,6 @@ service:
     package_manager: yarn
   environment:
     - BACKEND_BASE_URL
+
+public_endpoints:
+  - name: web
