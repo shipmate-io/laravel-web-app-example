@@ -1,0 +1,10 @@
+service:
+  name: frontend
+  type: 'nodejs:1.0'
+  variables:
+    path_to_source_code: /frontend
+    start_command: 'yarn start'
+    nodejs_version: 16
+    package_manager: yarn
+  environment:
+    - BACKEND_BASE_URL
