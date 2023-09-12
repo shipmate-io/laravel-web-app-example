@@ -1,11 +1,11 @@
 service:
-  name: frontend
-  type: 'nuxtjs:1.2'
+  type: 'nodejs:1.0'
   variables:
     path_to_source_code: /frontend
+    start_command: 'yarn start --hostname 0.0.0.0 --port 8080'
     nodejs_version: 16
     package_manager: yarn
-    build_target: server
+    build_script: 'yarn build'
   environment:
     - BACKEND_BASE_URL
 
