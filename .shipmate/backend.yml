@@ -1,0 +1,11 @@
+service:
+  name: backend
+  type: 'php:1.0'
+  variables:
+    path_to_source_code: /backend
+    deploy_script: |-
+      php artisan config:cache
+      php artisan route:cache
+      php artisan view:cache
+  environment:
+    - APP_KEY
