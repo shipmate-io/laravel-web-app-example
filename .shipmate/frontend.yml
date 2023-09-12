@@ -3,6 +3,7 @@ service:
   variables:
     path_to_source_code: /frontend
     start_command: 'yarn start -p 8080'
+    nodejs_version: 16
     package_manager: yarn
     build_script: 'yarn build'
   environment:
