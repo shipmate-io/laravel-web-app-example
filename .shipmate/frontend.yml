@@ -5,6 +5,7 @@ service:
     start_command: 'yarn start'
     nodejs_version: 16
     package_manager: yarn
+    build_script: 'yarn build'
   environment:
     - BACKEND_BASE_URL
 
