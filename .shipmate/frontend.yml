@@ -7,7 +7,7 @@ service:
     package_manager: yarn
     build_script: 'yarn build'
   environment:
-    - BACKEND_BASE_URL
+    BACKEND_BASE_URL: '{{ services.backend.public_endpoints.web.url }}'
 
 public_endpoints:
   - name: web

@@ -7,7 +7,7 @@ service:
       php artisan route:cache
       php artisan view:cache
   environment:
-    - APP_KEY
+    APP_KEY: 'base64:cnysI96CLkB0dMgVATzVK5rT/5tEJVpmw+7YhS5Qhfo=' # You should override this in production.
 
 public_endpoints:
   - name: web
